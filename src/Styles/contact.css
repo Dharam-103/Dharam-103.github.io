@@ -1,0 +1,104 @@
+.contact-main{
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.contact-div1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  
+}
+.contact-div1> div{
+    text-align: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+}
+
+.contact-div2{
+    margin-top: 20px; 
+    text-align: center;
+}
+
+
+.contact-heading{
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    background-color: teal;
+    width: 20%;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 0px;
+}
+.contact-touch{
+    text-align: center;
+    margin-top: 30px;
+    color: maroon;
+}
+.icon-1{
+    font-size: 40px;
+}
+
+#contact-phone,#contact-email,#contact-add,.contact-h3{
+    margin-top: 10px;
+    color: maroon;
+}
+
+.git-icon,.linked-icon{
+    font-size: 40px;
+    margin-left: 50px;
+}
+
+/* media query */
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+    .contact-heading{
+        width: 40%;
+    }
+    .contact-main{
+        width: 100%;
+    }
+    .contact-touch{
+        font-size: 40px;
+    }
+    .icon-1{
+        font-size: 70px;
+    }
+    .contact-h3{
+        font-size: 30px;
+    }
+    #contact-phone,#contact-email,#contact-add{
+        font-size: 26px;
+    }
+    .contact-div2{
+        margin-top: 30px;
+    }
+    .git-icon,.linked-icon{
+        font-size: 100px;
+    }
+}
+
+/* small screen */
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+    .contact-heading{
+        width: 90%;
+    }
+    .contact-main{
+        width: 100%;
+    }
+    .contact-div1{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);  
+      }
+      .contact-div{
+        margin-top: -80px;
+      }
+}

@@ -1,56 +1,53 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "../Styles/Navbar.css";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import{ImCross} from "react-icons/im";
+
 const Navbar=()=>{
     const[isMobile,setIsMobile]=useState(false);
+    const[navcolor,setNavcolor]=useState(false);
+   
+   const downloadFile2=()=>{
+     window.open("https://drive.google.com/file/d/1nkLCFswMxcodoZD37Py4hrflWccnL8It/view?usp=share_link","_blank")
+   }
     const handleClick=()=>{
         setIsMobile((prev)=> !prev);
     }
-    const activeStyles={
-        backgroundColor:"#000000",
-        color:"#5433FF",
-        padding:"7px",
-        borderRadius:"10px",
-        transition:"0.5s ease-in-out"
-    }
 
-    return(
-        <div id="nav-menu">
-            <div className="nav_div1">
-                <NavLink to="/">
-                    <h1 className="heading">Dharmendra</h1>
-                </NavLink>
+    useEffect(()=>{
+        window.addEventListener("scroll",()=>{
+            if(window.scrollY>400){
+                setNavcolor(true)
+            }else{
+                setNavcolor(false)
+            }
+        })
+    },[])
+  
+  return(
+          <section>
+              <div id={navcolor ?"nav-color":"nav-menu"}>
+                 <div className="nav_div1">
+                      <a href="#home">
+                          <h1 className="heading">Dharmendra</h1>
+                      </a>
+                </div>
+                <div className="nav-div-2">
+                  <div className={isMobile ? "list-main active":"list-main" }
+                     onClick={()=> setIsMobile(false)}>
+                     <a href="#home" className="nav-link home">Home</a>
+                     <a href="#about" className="nav-link about">About</a>
+                     <a href="#skills" className="nav-link skills">Skills</a>
+                     <a href="#projects" className="nav-link projects">Projects</a>
+                     <a href="#contact" className="nav-link contact">Contact</a>
+                     <a href="https://drive.google.com/uc?export=download&id=1nkLCFswMxcodoZD37Py4hrflWccnL8It"  id="resume-link-1"  className="nav-link resume"> <button id="resume-button-1" onClick={downloadFile2}><i class="fa-solid fa-download"></i>Resume</button></a>
+                 </div>
+               <div className="mobile-menu" onClick={handleClick}>
+                  {isMobile ?<ImCross/>:<GiHamburgerMenu/>}
+               </div>
             </div>
-             <div className="nav_div2">
-             <ul className={isMobile ? "list-main active":"list-main" }
-              onClick={()=> setIsMobile(false)}
-             >
-                <li>
-                    <NavLink to="/" className="nav-link home" style={({isActive})=> isActive?activeStyles:null}>Home</NavLink>
-                </li>  
-                <li>
-                    <NavLink to="/about" className="nav-link about" style={({isActive})=> isActive?activeStyles:null}>About</NavLink>
-                </li> 
-                <li>
-                    <NavLink to="/skills" className="nav-link skills" style={({isActive})=> isActive?activeStyles:null}>Skills</NavLink>
-                </li> 
-                <li>
-                    <NavLink to="/projects" className="nav-link projects" style={({isActive})=> isActive?activeStyles:null}>Projects</NavLink>
-                </li> 
-                <li>
-                    <NavLink to="/contact" className="nav-link contact" style={({isActive})=> isActive?activeStyles:null}>Contact</NavLink>
-                </li> 
-                <button>
-                   <NavLink to="" className="nav-link resume"><i className="fa-solid fa-download"></i>Resume</NavLink>
-                </button>
-            </ul>
-             </div>
-           <div className="mobile-menu" onClick={handleClick}>
-              {isMobile ?<ImCross/>:<GiHamburgerMenu/>}
-           </div>
-        </div>
+         </div>
+    </section>
     )
 }
 

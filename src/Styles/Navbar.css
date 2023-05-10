@@ -1,6 +1,6 @@
+
 #nav-menu{
     width: 100%;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -8,22 +8,42 @@
     background-color:#443C68 ;
     position: fixed;
     top:0;
+    z-index: 100;
 }
-.list-main{
-    display: flex; 
-    align-items: center;  
+#nav-color{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 12vh;
+    position: fixed;
+    top:0;
+    z-index: 100;
+    background-color: #97DEFF;
 }
-.list-main li a{
-    margin-left: 3rem;
+
+
+.nav-div-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resume-button-1{
+    margin-left: 2rem;
+    padding: 8px;
+    background-color: #B99B6B;;
     font-size: 25px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #B99B6B;
+    border: none;
+    border-radius: 10px;  
+    cursor: pointer; 
 }
+
 .heading{
+    margin-left: 50px;
     text-decoration: none;
     color: #B99B6B;
-    font-size: 40px;
     background: linear-gradient(90deg,#ff0000,#ffff00,#ff00f3,#0033ff,#ff00c4,#ff0000);
     background-size: 400%;
     -webkit-text-fill-color: transparent;
@@ -39,74 +59,86 @@
         background-position: 400%;
     }
 }
-.list-main button{
-    margin-left: 4rem;
-    padding: 8px;
-    background-color: #B99B6B;;
-    font-size: 25px;
-    border: none;
-    border-radius: 10px;   
-}
-.list-main button a{
-    text-decoration: none;
-    color: black;
-    padding-left: 5px;
-}
-.nav_div1{
-    margin-left: 8rem;
-}
-.nav_div1 a{
-    text-decoration: none;
-}
-.nav_div2{
-    margin-right: 2rem;
-    padding: 8px;
-}
 
 .fa-download{
     margin-right: 10px;
 }
 .mobile-menu{
     display: none;
-    font-size: 40px;
 }
+
+.list-main{
+    margin-right: 40px;
+}
+.list-main  a{
+    margin-left: 3rem;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #B99B6B;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+    .heading{
+        margin-left: 10px;
+        font-size: 30px;
+    }
+
+    .list-main{
+        width: 100%;
+        margin-right: 0px;
+    }
+    .list-main  a{
+        margin-left: 1rem;
+        font-size: 23px;
+        font-weight: bold;
+    }
+    #resume-button-1{
+        margin-left: 0.5rem;
+        padding: 5px;
+        font-size: 20px;
+    }
+} 
+
 
 @media all and (min-width: 320px) and (max-width: 767px) {
-   .list-main{
-     flex-direction: column;
-     align-items: center;
-     width: 70%;
-     height: 100vh;
-     position: absolute;
-     top: 12vh;
-     right:-100%;
-     background-color: #443C68;
-     padding-top: 80px;
-     transition: 0.5s ease-in;
- }
- .list-main.active{
-    right:0;
- }
- .mobile-menu{
-    display: block;
-   margin-right: 20px;
-   font-size: 60px;
-}
-   .list-main li{
-    padding: 1rem 0;
-   }
+    .heading{
+        margin-left: 10px;
+        font-size: 25px;
+    }
    
-   .list-main button{
-    margin-top: 20px;
-   }
-   .list-main button a,.list-main li a{
-    font-size: 40px;
-   }
-   .nav_div1{
-    margin-left: 1rem;
-  }
-  .heading{
-    font-size: 40px;
-  }
+    .mobile-menu{
+        display: block;
+        font-size: 40px;
+        margin-right: 10px;
+    }
+    
+    .list-main{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         height: 100vh;
+         position: absolute;
+         top: 12vh;
+         right: -100%;
+         background-color: #443C68;
+         padding-top: 80px;
+         transition: 0.5s ease-in;
+         margin-right: 0px;
+     }
+     .list-main.active{
+        right:0;
+     }
 
-}
+       .list-main a{
+        padding: 1rem 0;
+       }
+      
+    .list-main a{
+        font-size: 30px;
+       }
+ }
+ 
+ 

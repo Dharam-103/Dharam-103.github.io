@@ -7,12 +7,15 @@
 html{
     scroll-behavior: smooth;
 }
-
-body{
-    background-color:#000000;
+h1{
+    font-size: 40px;
 }
-
+p{
+    font-size: 20px; 
+}
 ul{
     list-style: none;
 }
-
+a{
+    text-decoration: none;
+}
