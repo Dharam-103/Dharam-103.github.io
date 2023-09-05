@@ -6,7 +6,7 @@ import TypeWriterEffect from "react-typewriter-effect";
 const Home = () => {
 
   const downloadFile2=()=>{
-    window.open("https://drive.google.com/file/d/1nkLCFswMxcodoZD37Py4hrflWccnL8It/view?usp=share_link","_blank")
+    window.open("https://drive.google.com/file/d/11YUjU1Y1dGCuvfkbltm-XnzaYq18gAeN/view?usp=sharing","_blank")
   }
   
   return (
@@ -43,7 +43,7 @@ const Home = () => {
               />
           </h1>
          
-      <a href="https://drive.google.com/uc?export=download&id=1nkLCFswMxcodoZD37Py4hrflWccnL8It"  id="resume-link-2"  className="nav-link resume"> <button id="resume-button-2" onClick={downloadFile2}>Download Resume </button></a>
+      <a href="https://drive.google.com/uc?export=download&id=11YUjU1Y1dGCuvfkbltm-XnzaYq18gAeN"  id="resume-link-2"  className="nav-link resume"> <button id="resume-button-2" onClick={downloadFile2}>Download Resume </button></a>
          
         </div>
       </div>

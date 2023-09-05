@@ -8,7 +8,7 @@ const Navbar=()=>{
     const[navcolor,setNavcolor]=useState(false);
    
    const downloadFile2=()=>{
-     window.open("https://drive.google.com/file/d/1nkLCFswMxcodoZD37Py4hrflWccnL8It/view?usp=share_link","_blank")
+     window.open("https://drive.google.com/file/d/11YUjU1Y1dGCuvfkbltm-XnzaYq18gAeN/view?usp=sharing","_blank")
    }
     const handleClick=()=>{
         setIsMobile((prev)=> !prev);
@@ -40,7 +40,7 @@ const Navbar=()=>{
                      <a href="#skills" className="nav-link skills">Skills</a>
                      <a href="#projects" className="nav-link projects">Projects</a>
                      <a href="#contact" className="nav-link contact">Contact</a>
-                     <a href="https://drive.google.com/uc?export=download&id=1nkLCFswMxcodoZD37Py4hrflWccnL8It"  id="resume-link-1"  className="nav-link resume"> <button id="resume-button-1" onClick={downloadFile2}><i class="fa-solid fa-download"></i>Resume</button></a>
+                     <a href="https://drive.google.com/uc?export=download&id=11YUjU1Y1dGCuvfkbltm-XnzaYq18gAeN"  id="resume-link-1"  className="nav-link resume"> <button id="resume-button-1" onClick={downloadFile2}><i class="fa-solid fa-download"></i>Resume</button></a>
                  </div>
                <div className="mobile-menu" onClick={handleClick}>
                   {isMobile ?<ImCross/>:<GiHamburgerMenu/>}
